@@ -1,0 +1,9 @@
+CREATE TABLE map_vertex_t (
+    id SERIAL PRIMARY KEY,
+    map_id INTEGER NOT NULL REFERENCES map_t(id) ON DELETE CASCADE,
+    group_id INTEGER NOT NULL REFERENCES vertex_group_t(id) ON DELETE CASCADE,
+    position GEOMETRY(POINTZ) NOT NULL,
+    x FLOAT NOT NULL,
+    y FLOAT NOT NULL,
+    z FLOAT NOT NULL
+);

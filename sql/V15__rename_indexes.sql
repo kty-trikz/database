@@ -1,0 +1,7 @@
+ALTER INDEX map_vertex_position_idx RENAME TO map_vertex_t_position_idx;
+ALTER INDEX map_vertex_group_id_idx RENAME TO map_vertex_t_group_id_idx;
+ALTER INDEX map_vertex_map_id_position RENAME TO map_vertex_t_map_id_position_idx;
+ALTER INDEX map_vertex_map_id_group_id_idx RENAME TO map_vertex_t_map_id_group_id_idx;
+ALTER INDEX player_ban_history_player_id_idx RENAME TO player_ban_history_t_player_id_idx;
+ALTER INDEX player_ban_history_expires_at_idx RENAME TO player_ban_history_t_expires_at_idx;
+ALTER INDEX player_ban_history_banned_by_idx RENAME TO player_ban_history_t_banned_by_idx;

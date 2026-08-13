@@ -1,0 +1,10 @@
+CREATE TABLE player_ban_history_t (
+    id SERIAL PRIMARY KEY,
+    player_id INTEGER NOT NULL REFERENCES player_t(id) ON DELETE CASCADE,
+    player_xuid INTEGER NOT NULL REFERENCES player_t(xuid) ON DELETE CASCADE,
+    banned_by INTEGER REFERENCES player_t(id) ON DELETE SET NULL,
+    notes TEXT,
+    expires_at TIMESTAMPTZ,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
